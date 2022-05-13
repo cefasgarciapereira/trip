@@ -1,0 +1,39 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    background:
+        linear-gradient(rgba(0, 0, 0, .5),
+            rgba(0, 0, 0, .5)),
+        url("https://browsecat.net/sites/default/files/road-backgrounds-128905-331333-9616031.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (min-width: 1200px) {
+    .clock {
+        flex-direction: row;
+    }
+}

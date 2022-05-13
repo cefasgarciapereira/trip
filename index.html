@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <script>
+        var countDownDate = new Date("May 20, 2022 21:00:00").getTime();
+        var myfunc = setInterval(function () {
+            var now = new Date().getTime();
+            var timeleft = countDownDate - now;
+
+            var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days + " dias "
+            document.getElementById("hours").innerHTML = hours + " horas "
+            document.getElementById("mins").innerHTML = minutes + " minutos "
+            document.getElementById("secs").innerHTML = "e " + seconds + " segundos"
+        }, 1000)
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="reset.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <title>Trip!</title>
+</head>
+
+<body>
+    <div class="page">
+        <h1>Faltam</h1>
+        <div class="clock">
+            <h2 id="days"></h2>
+            <h2 id="hours"></h2>
+            <h2 id="mins"></h2>
+            <h2 id="secs"></h2>
+        </div>
+        <h1>pra trip!</h1>
+    </div>
+</body>
+
+</html>
